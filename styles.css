@@ -1,0 +1,52 @@
+* {
+    margin: 0px;
+    border: 0px;
+}
+
+html {
+    background-color: rgb(27, 68, 27);
+    color: rgb(220, 220, 220);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+#title {
+    margin: 25px;
+}
+
+h1 {
+    color: goldenrod;
+    font-size: 70px;
+    letter-spacing: 1px;
+}
+
+p {
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+p:first-child {
+    font-style: italic;
+}
+
+#start {
+    margin-top: 30px;
+}
+
+#new-card {
+    margin-top: 8px;
+}
+
+#start-btn, #new-card-btn {
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    background-color: goldenrod;
+    color: rgb(27, 68, 27);
+    width: 250px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
