@@ -85,3 +85,17 @@ function newCard() {
 }
 
 newCardEl.addEventListener('click', newCard);
+
+//-------------------------------------------
+
+/* for (let i = 1; i < 11; i += 1) {
+
+    console.log(i);
+
+}; */
+
+let cardsTest = [7, 3, 9];
+
+for (let i = 0; i < cardsTest.length; i++) {
+    console.log(cardsTest[i]);
+};
