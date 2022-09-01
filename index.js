@@ -33,7 +33,7 @@ if (age < 100) {
 }
  ------------------------------------- */
 
- let firstCard = 10;
+let firstCard = 10;
 let secondCard = 4;
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
@@ -41,15 +41,16 @@ let isAlive = true;
 let message = ""
 let cards = [firstCard, secondCard];
 
-
 //----------------------------------------------------
 let startEl = document.getElementById('start-btn');
 let messageEl = document.getElementById('message-el');
 let cardsEl = document.getElementById('cards-el');
 let sumEl = document.getElementById('sum-el');
 
-cardsEl.textContent = 'Cards: ' + cards[0] + ', ' + cards[1];
-sumEl.textContent = 'Sum: ' + sum;
+cardsEl.textContent = 'Cards: ';
+sumEl.textContent = 'Sum: ';
+
+startEl.addEventListener('click', startGame);
 
 function startGame() {
     renderGame();
@@ -65,10 +66,19 @@ function renderGame() {
         message = "You're out of the game!";
         isAlive = false;
     }
+
+    cardsEl.textContent = 'Cards: ';
+
+    for (let i = 0; i < cards.length; i++) {
+        cardsEl.textContent += cards[i] + ' ';
+    }
+
     messageEl.textContent = message;
+    
+    sumEl.textContent = 'Sum: ' + sum;
 }
 
-startEl.addEventListener('click', startGame);
+
 
 //----------------------------------------------------
 let newCardEl = document.getElementById('new-card-btn');
@@ -76,11 +86,10 @@ let newCardEl = document.getElementById('new-card-btn');
 let card;
 
 function newCard() {
-    console.log('Drawing a new card from the deck');
     card = 7;
     sum += card;
-    sumEl.textContent = 'Sum: ' + sum;
-    cardsEl.textContent += ', ' + card;
+    cards.push(card);
+    console.log(cards);
     renderGame();
 }
 
@@ -93,9 +102,25 @@ newCardEl.addEventListener('click', newCard);
     console.log(i);
 
 }; */
-
+//----------------------------------------
+/* 
 let cardsTest = [7, 3, 9];
 
 for (let i = 0; i < cardsTest.length; i++) {
     console.log(cardsTest[i]);
 };
+
+let sentence = ['Hello', 'my', 'name', 'is', 'Carlos'];
+let greetingEl = document.getElementById('greeting-el');
+
+for (let i = 0; i < sentence.length; i++) {
+    if (i < 4) {
+        greetingEl.textContent += sentence[i] + ' ';
+    }
+    else {
+        greetingEl.textContent += sentence[i] + '.';
+    }
+}
+
+greetingEl.textContent.trimEnd
+ */
