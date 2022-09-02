@@ -33,8 +33,15 @@ if (age < 100) {
 }
  ------------------------------------- */
 
-let firstCard = 10;
-let secondCard = 4;
+ function getRandomCard () {
+    let randomNumber = Math.floor(Math.random() * 13) + 1
+    return randomNumber
+ }
+
+ console.log(getRandomCard())
+
+let firstCard = getRandomCard();
+let secondCard = getRandomCard();
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
 let isAlive = true;
@@ -86,7 +93,7 @@ let newCardEl = document.getElementById('new-card-btn');
 let card;
 
 function newCard() {
-    card = 7;
+    card = getRandomCard();
     sum += card;
     cards.push(card);
     console.log(cards);
@@ -123,4 +130,47 @@ for (let i = 0; i < sentence.length; i++) {
 }
 
 greetingEl.textContent.trimEnd
+ */
+
+//------------------------------------------------
+/* 
+let player1Time = 102
+let player2Time = 107
+
+function getFastestRaceTime() {
+    if (player1Time < player2Time) {
+        return player1Time
+    } else if (player2Time < player1Time) {
+        return player2Time
+    } else {
+        return player1Time
+    }
+}
+
+let fastestRace = getFastestRaceTime();
+
+console.log(fastestRace);
+
+function getTotalRaceTime() {
+    return player1Time + player2Time
+}
+
+let totalTime = getTotalRaceTime();
+
+console.log(totalTime);
+ */
+
+//---------------------------------------------------
+
+/* 
+function rollDice() {
+    let randomNumber = Math.floor( Math.random() * 6 ) + 1
+    return randomNumber
+}
+
+console.log(rollDice())
+
+let flooredNumber = Math.floor(3.45632)
+
+console.log(flooredNumber)
  */
