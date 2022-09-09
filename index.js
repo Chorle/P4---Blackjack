@@ -33,26 +33,20 @@ if (age < 100) {
 }
  ------------------------------------- */
 
- function getRandomCard () {
-    let randomNumber = Math.floor(Math.random() * 13) + 1
-    return randomNumber
- }
-
- console.log(getRandomCard())
-
-let firstCard = getRandomCard();
-let secondCard = getRandomCard();
-let sum = firstCard + secondCard;
+let cards = [];
+let sum = 0;
 let hasBlackJack = false;
-let isAlive = true;
+let isAlive = false;
 let message = ""
-let cards = [firstCard, secondCard];
+let messageEl = document.getElementById('message-el');
+let sumEl = document.getElementById('sum-el');
+let cardsEl = document.getElementById('cards-el');
+
+console.log(cards);
 
 //----------------------------------------------------
+
 let startEl = document.getElementById('start-btn');
-let messageEl = document.getElementById('message-el');
-let cardsEl = document.getElementById('cards-el');
-let sumEl = document.getElementById('sum-el');
 
 cardsEl.textContent = 'Cards: ';
 sumEl.textContent = 'Sum: ';
@@ -60,6 +54,11 @@ sumEl.textContent = 'Sum: ';
 startEl.addEventListener('click', startGame);
 
 function startGame() {
+    let firstCard = getRandomCard();
+    let secondCard = getRandomCard();
+    cards = [firstCard, secondCard];
+    sum = firstCard + secondCard;
+    isAlive = true;
     renderGame();
 }
 
@@ -85,8 +84,6 @@ function renderGame() {
     sumEl.textContent = 'Sum: ' + sum;
 }
 
-
-
 //----------------------------------------------------
 let newCardEl = document.getElementById('new-card-btn');
 
@@ -101,6 +98,18 @@ function newCard() {
 }
 
 newCardEl.addEventListener('click', newCard);
+
+function getRandomCard () {
+    let randomNumber = Math.floor(Math.random() * 13) + 1
+    if (randomNumber > 10) {
+        return 10;
+    } else if (randomNumber === 1) {
+        return 11;
+    }
+    return randomNumber
+ }
+
+ console.log(getRandomCard())
 
 //-------------------------------------------
 
