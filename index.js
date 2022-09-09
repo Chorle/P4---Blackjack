@@ -90,11 +90,14 @@ let newCardEl = document.getElementById('new-card-btn');
 let card;
 
 function newCard() {
-    card = getRandomCard();
-    sum += card;
-    cards.push(card);
-    console.log(cards);
-    renderGame();
+    if (isAlive === true && hasBlackJack === false) {
+        card = getRandomCard();
+        sum += card;
+        cards.push(card);
+        console.log(cards);
+        renderGame();
+    }
+    
 }
 
 newCardEl.addEventListener('click', newCard);
@@ -182,4 +185,44 @@ console.log(rollDice())
 let flooredNumber = Math.floor(3.45632)
 
 console.log(flooredNumber)
+ */
+
+//--------------------------------------------------------
+/* 
+let hasCompletedCourse = true;
+let givesCertificate = true;
+
+function generateCertificate() {
+    console.log('Generating certificate...');
+}
+
+if (hasCompletedCourse === true && givesCertificate === true) {
+    generateCertificate ();
+}
+
+//---------------------------------------------------------
+
+let hasSolvedChallenge = false;
+let hasHintsLeft = false;
+
+function showSolution() {
+    console.log('Showing the solution...');
+}
+
+if (hasSolvedChallenge === false && hasHintsLeft === false) {
+    showSolution();
+}
+
+//---------------------------------------------------------
+
+let likesDocumentaries = true;
+let likesStartups = false;
+
+function recommendMovie() {
+    console.log('Hey, check out this new film we think you will like!');
+}
+
+if (likesDocumentaries === true || likesStartups === true) {
+    recommendMovie();
+}
  */
