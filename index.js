@@ -37,12 +37,20 @@ let cards = [];
 let sum = 0;
 let hasBlackJack = false;
 let isAlive = false;
-let message = ""
+let message = '';
 let messageEl = document.getElementById('message-el');
 let sumEl = document.getElementById('sum-el');
 let cardsEl = document.getElementById('cards-el');
 
 console.log(cards);
+
+let player = {
+    name: 'Carlos',
+    chips: '145'
+}
+
+let playerEl = document.getElementById('player-el');
+playerEl.textContent = player.name + ': $' + player.chips;
 
 //----------------------------------------------------
 
@@ -114,15 +122,20 @@ function getRandomCard () {
 
  console.log(getRandomCard())
 
-//-------------------------------------------
+//---------------------FOR LOOPS----------------------
 
-/* for (let i = 1; i < 11; i += 1) {
-
-    console.log(i);
-
-}; */
-//----------------------------------------
 /* 
+
+for (let i = 1; i < 11; i += 1) {
+    console.log(i);
+}; 
+
+*/
+
+//-----------------------------------------------------
+
+/* 
+
 let cardsTest = [7, 3, 9];
 
 for (let i = 0; i < cardsTest.length; i++) {
@@ -142,10 +155,13 @@ for (let i = 0; i < sentence.length; i++) {
 }
 
 greetingEl.textContent.trimEnd
- */
+
+*/
 
 //------------------------------------------------
+
 /* 
+
 let player1Time = 102
 let player2Time = 107
 
@@ -172,7 +188,7 @@ let totalTime = getTotalRaceTime();
 console.log(totalTime);
  */
 
-//---------------------------------------------------
+//---------------------------MATH FUNCTION------------------------
 
 /* 
 function rollDice() {
@@ -187,7 +203,7 @@ let flooredNumber = Math.floor(3.45632)
 console.log(flooredNumber)
  */
 
-//--------------------------------------------------------
+//---------------------------LOGICAL OPERATOR-----------------------------
 /* 
 let hasCompletedCourse = true;
 let givesCertificate = true;
@@ -226,3 +242,33 @@ if (likesDocumentaries === true || likesStartups === true) {
     recommendMovie();
 }
  */
+
+//-------------------------Objects-----------------------------
+
+/*
+
+let course = {
+    title: 'Learn CSS Grid for free',
+    lessons: 16,
+    creator: 'Carlos Julián Denogens',
+    length: 63,
+    level: 2,
+    isFree: true,
+    tags: ['html', 'css']
+}
+
+console.log(course.tags);
+
+//------------------------------------------------------
+
+let castle = {
+    title: 'Live like a king in my castle',
+    price: 190,
+    isSuperHost: true,
+    image: ['img/castle1.png', 'img/castle2.png']
+}
+
+console.log(castle.price);
+console.log(castle.isSuperHost);
+
+*/
