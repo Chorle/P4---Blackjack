@@ -46,8 +46,13 @@ console.log(cards);
 
 let player = {
     name: 'Carlos',
-    chips: '145'
+    chips: '145',
+    sayHello: function() {
+        console.log('Hola!')
+    }
 }
+
+player.sayHello()
 
 let playerEl = document.getElementById('player-el');
 playerEl.textContent = player.name + ': $' + player.chips;
@@ -272,3 +277,88 @@ console.log(castle.price);
 console.log(castle.isSuperHost);
 
 */
+
+//------------------------------------------------------
+
+/* 
+let person = {
+    name: 'Carlos',
+    age: 28,
+    contry: 'Argentina',
+    logData: function() {
+        console.log(person.name, 'is', person.age, 'years old and lives in', person.contry);
+    }
+}
+
+person.logData();
+ */
+
+//-----------------------------------------------------
+
+/* 
+const passenger = 4
+
+if (passenger < 6) {
+    console.log('You have a 100% discount');
+} else if (passenger < 18) {
+    console.log('You have a 50% discount');
+} else if (passenger < 67) {
+    console.log('You have no discount');
+} else {
+    console.log('You have a 30% discount');
+}
+ */
+
+//----------------------------------------------------
+
+/* 
+let largeCountries = ['China', 'India', 'USA', 'Indonesia', 'Pakistan'];
+
+console.log('The largest countries in the world:');
+
+for (let i = 0; i < largeCountries.length; i++) {
+    console.log('-', largeCountries[i]);
+}
+*/
+
+//-----------------------------------------------------
+
+/* 
+let largeCountries = ['Tuvalu', 'India', 'USA', 'Indonesia', 'Monaco'];
+
+console.log('The largest countries in the world:');
+
+largeCountries.pop();
+largeCountries.shift();
+largeCountries.push('Pakistan');
+largeCountries.unshift('China');
+
+
+for (let i = 0; i < largeCountries.length; i++) {
+    console.log('-', largeCountries[i]);
+}
+*/
+
+//------------------------------------------------------
+
+/* 
+let dayOfMonth = 14;
+let weekday = 'Friday';
+
+if ((dayOfMonth === 13) && (weekday === 'Friday')) {
+    console.log('😱');
+} else {
+    console.log('all good');
+}
+*/
+
+//-----------------------------------------------------
+
+let hands = ['rock', 'paper', 'scissors'];
+
+function rollRPS() {
+    let randomRPS = Math.floor( Math.random() * 3 )
+    return randomRPS
+}
+
+console.log(hands[rollRPS()])
